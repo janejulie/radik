@@ -1,0 +1,44 @@
+#;Name;Eigenschaften;Geometrie;Topologie;Dynamik;Proportionen;Textstelle
+1;Insel Atlantis;gehört Poseidon;Polygon;;ja;;113c
+2;Ebene;"schönste; zufriedenstellend an Fruchtbarkeit";Polygon;"Mitte von 1; nahe am Meer";nein;;113c
+3;"Berg/Anhöhe ";;Polygon;"Am Rand von 2; ungefähr 50 Stadien vom Meer";nein;Von allen Seiten von geringer Höhe;113c
+4;Wohngebäude;Wohnort einer dreiköpfigen Familie;Polygon;"Auf 4 Mittelpunkt von 5*, 6*";ja;;113c
+5a;Zentrum der Ringe;;Polygon;Auf 3;ja;;113c
+6a;1. Ring aus Meer;;Polygon;Zentral um 5a ;ja;1 Stadien breit;113d
+5b;1. Ring aus Land;;Polygon;Zentral um 6a;ja;"3 Stadien breit; später breiter";"113d; 116a"
+6b;2. Ring aus Meer;;Polygon;Zentral um 5b;ja;2 Stadien breit;113d
+5c;2. Ring aus Land ;;Polygon;Zentral um 6b;ja;"3 Stadien breit; später breiter";"113d; 113e; 115e; 116a"
+6c;2. Ring aus Meer;;Polygon;Zentral um 5c;ja;3 Stadien breit;113d
+7a;Kaltwasserquelle;;Punkt;Auf 5a;ja;;113e
+7b;Warmwasserquelle;;Punkt;Auf 5a;ja;;113e
+8;Heiliger Bezirk;"Kleito und Poseidon geweiht; unbetretbar";Polygon;Auf 5a;nein;;116a
+9;Akropolis;innerer Stadtkreis;Polygon;Auf 5a;nein;5 Stadien Durchmesser;"113e; 116a"
+10;Königspalast;;Polygon;"Ehemals 4 innerhalb 9";ja;;"115c; 116a; 116c"
+11a;Brücke 1. Ring;;Linie;Über 6a;nein;1 Plethron breit;"115c; 116a"
+11b;Brücke 2. Ring;;Linie;Über 6b;nein;;115c
+11c;Brücke 3. Ring;;Linie;Über 6c;nein;;115c
+12;Kanal;;Polygon;"Angefangen im Meer Mündet in 6a ";ja;"3 Plethren breit; 100 Fuß tief; 50 Stadien lang; breit genug für Schiffe";115d
+13a;Mauer um gesamte Stadt;mit Kupfer eingefaßt;Linienring;"Um 6c 50 Stadien Abstand von 6c";nein;1 Plethron breit;116a
+13b;Mauer um innere Stadt;mit Zinn überzogen;Linienring;Um 5a;nein;;116a
+13c;"Mauer um Akropolis ";mit Oreichalkos überzogen;Linienring;Um 9;nein;;116c
+14a;Türme der Mauer 13a;Steine weiß/rot/schwarz/gemischt;Polygon;An Brücken und Durchlässen zum Meer;nein;;115d
+14b;Türme der Mauer 13b;Steine weiß/rot/schwarz/gemischt;Polygon;An Brücken und Durchlässen zum Meer;nein;;115d
+15;Hohlraum/Durchfahrt;;Linie;Innerhalb des Felsens ;ja;Doppelte Schiffshäuser hoch;"115e; 116b"
+16;Tempel des Poseidon;"nicht griechisches Aussehen; mit Silber überzogen; Akrotere gold überzogen; Innenausstattung siehe 116d, 116e";Polygon;;nein;"1 Stadion breit; 3 Plethen breit; passend hoch";116d
+17;Altar;;Polygon;Vor 16 gelegen;nein;;117a
+18a;Außenbecken;unter freiem Himmel;Polygon;An 7a, 7b;ja;;117b
+18b;Innenbecken;"überdacht; getrennte Bereiche (Könige, Privatleute, Frauen, Zugtiere/Pferde)";Polygon;An 7a, 7b;ja;;117b
+19;Hain des Poseidon;;Polygon;;ja;;117b
+20;Hippodrom;Für Pferdewettrennen;Linienring;Auf 5c;nein;1 Stadion breit, ganzer Ring;117c
+21;Wasserabfluss des Beckens;;Linie;Fließt durch 19;nein;;117b
+22a;Wohnstätte der Leibwache 1;;Polygon;"An der Seite von 20 gegenüber 22b";nein;;117d
+22b;Wohnstätte der Leibwache 2;;Polygon;"An der Seite von 20 gegenüber 22a";nein;;117d
+22c;Wohnstätte der Leibwache 3 (1. Ring);;Polygon;"Auf  7 näher an Akropolis als 22a, 22b";nein;;117d
+22d;Wohnstätte der Leibwache 4 (Akropolis);;Polygon;Innerhalb der Akropolis;nein;;117d
+23a;Schiffshaus 1;;Polygon;An 24a;nein;;"115c; 117d"
+23b;Schiffshaus 2;;Polygon;An 24b;nein;;"115c; 117d"
+23c;Schiffshaus 3;;Polygon;An 25c;nein;;"115c; 117d"
+24a;Hafen 1;;Polygon;An 5a;nein;;117e
+24b;Hafen 2;;Polygon;An 5b;nein;;117e
+24c;Hafen 3;;Polygon;An 5c;nein;;117e
+25;Wohngebiet;;Polygon;Außerhalb von 6c;nein;;117e
