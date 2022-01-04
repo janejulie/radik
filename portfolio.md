@@ -1,18 +1,20 @@
+# Radik Portfolio
+
 Dieses Portfolio entstand im Rahmen der Vorlesung "Raumbezogene Daten im interdisziplinären Kontext" im WiSe 2021/2022 an der Johannes-Gutenberg Universität Mainz.
 
 Die weiterführenden Dateien die im Rahmen dieser Übungen entstanden sind befinden sich in den zugehörigen Ordnern des Hauptsverzeichnisses.
 
-# 1 - Atlantis Rekonstruktion
+## 1 - Atlantis Rekonstruktion
 
 Abgabe zum 2. November 2021
 
-## Problemstellung
+### Problemstellung
 
 Rekonstruktion der fiktiven Insel Atlantis nach Platons-Dialog "Kritias"
 
-## Ergebnis
+### Ergebnis
 
-### Liste der Geoobjekt
+#### Liste der Geoobjekt
 
 | **#**   | **Name**                               | **Eigenschaften**                                            | **Geometrie** | **Topologie**                               | **Dynamik** | **Proportionen**                                             | **Textstelle**         |
 | ------- | -------------------------------------- | ------------------------------------------------------------ | ------------- | ------------------------------------------- | ----------- | ------------------------------------------------------------ | ---------------------- |
@@ -230,7 +232,11 @@ Abgabe zum 14. Dezember 2021
 
 ## Ergebnis
 
+# 8 - 
 
+Abgabe zum 4. Januar 2022
+
+# 9 - Abgabe zum 
 
 
 
