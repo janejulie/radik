@@ -66,6 +66,7 @@ Rekonstruktion der fiktiven Insel Atlantis nach Platons-Dialog "Kritias"
 
 ![visualisierung](./1-atlantis/visualisierung.png)
 
+
 # 2 - Erstellung eines eigenen Geopackages
 
 Abgabe zum 9. November 2021
@@ -74,7 +75,6 @@ Abgabe zum 9. November 2021
 
 Die folgende Abbildung soll mithilfe von QGIS als Geopackage erstellt werden.
 
-#TODO
 ![original](./2-owngeopackage/original.png)
 
 ## Vorgehensweise
@@ -98,6 +98,7 @@ Das Geopackage besteht aus 3 Layern.
 Die Visualisierung ohne der Bildvorlage resultiert in folgender Layer. Dabei haben die Bäume auch die Radien der Baumkronen abgespeichert. Für eine genauer Visualisierung kann man die Punktgröße in Relation dazu setzen.
 
 ![geopackage_final](./2-owngeopackage/geopackage_final.png)
+
 
 # 3 - Bomber's Baedeker
 
@@ -152,6 +153,7 @@ Um die Korrektheit der Lage zu prüfen wurde im letzten Schritt die XYZ Tiles de
 
 Auch wenn die Daten zu einem anderen historisch Zeitpunkt erhoben wurden, sieht man eine Abweichung der Lage im Vergleich zur OpenStreetMap. Ein Muster wurde auf den ersten Blick nicht erkennbar. Eine Verschiebung des "Ursprungs" ist ausgeschlossen. Sieht man von einer möglichen Ungenauigkeit der Daten ab (Wahl des Punktes einer Stadt, ...), stellt sich die Frage, ob die korrekte Projektion angewendet wurde.
 
+
 #  4 - Google Earth Pro Alternativen
 
 Abgabe zum 23. November 2021
@@ -193,6 +195,7 @@ Die Website der Software [^worldwind]
 
 Statt einer Installation auf dem eigenen Recher kann Google Earth Pro auch in Virtuellen Boxen wie Turbo.net o.Ä verwendet werden. 
 
+
 #  5 - Topologie AtlantGIS
 
 Abgabe zum 30. November 2021
@@ -211,25 +214,54 @@ Das Ergebnis der Visualisierung sieht folgendermaßen aus.
 
 ![visualization_atlantgis](./5-atlantGIS/visualization.png)
 
-# 6 - Raum und Zeit
+# 6 -  Raum und Zeit in GIS
 
 Abgabe zum 7. Dezember 2021
 
-## Aufgabe
-
 ## Vorgehensweise
+
 
 ## Ergebnis
 
-# 7 - Oberflächenmodelle
+
+# 7 - Geodatenmodelle
 
 Abgabe zum 14. Dezember 2021
 
-## Aufgabe
+## Fragestellung
 
-## Vorgehensweise
+Welche Arten gibt es um die Delaunay Triangulation zu erstellen? [^delauney_wiki_en] [^delauney_wiki_de] [^delauney_mit]
 
 ## Ergebnis
+
+Der mathematische Hintergrund beruht auf die Detektion eines Punktes in dem Kreisumfang. Dafür wird die Determinante (s. [^delauney_wiki_de]) der Punkte verwendet.
+
+### Flip-Algorithmus
+
+Es wird eine zufällige Belegung der Dreiecke ermittelt. Erst danach wird geprüft ob die Bedingung ("Der Umkreis eines Dreiecks des Netzes darf keine weiteren Punkte der vorgegebenen Punktmenge enthalten") für alle Dreiecke erfüllt ist. Wird die Bedingung verletzt, wird sie lokal behoben indem die Kante "geflipt" wird. Dieser namensgebende Mechanismus verbindet die zuvor nicht verbunden Punkte mit einer Kante und entfernt die bereits Bestehende. Da jedoch dieses Problem anschließend global gelöst werden muss, hat der Algorithmus eine quadratische Worst-Case Laufzeit.
+
+Der Pseudocode für die Implementierung [^delauney_wiki_de]
+``` 
+ 1: Initialisiere die leeren Mengen V, E, T und K = (V, E, T)
+ 2: Markiere alle Kanten e ∈ E
+ 3: Füge alle Kanten e ∈ E dem Stack s hinzu
+ 4: Solange der Stack s nicht leer ist:
+ 5:     Entferne die Kante ei,j vom Stack s und entmarkiere ei,j
+ 6:     Falls die Kante ei,j die Umkreisbedingung nicht erfüllt:
+ 7:         ek,l = Flip der Kante ei,j
+ 8:         Berechne L(ek,l)
+ 9:         Für alle Kanten e ∈ {ek,j, ej,l, el,i, ei,j}:
+10:             Falls die Kante e nicht markiert ist:
+11:                 Markiere die Kante e und lege die Kante e oben auf den Stack s
+```
+
+### mit Laufzeit O(n log(n))
+
+Um Laufzeit zu sparen kann die inkrementelle Konstruktion, der Divide-and-Conquer oder der Sweep Algorithmus verwendet werden. Diese benötigen O(n log(n)) Laufzeit und sind somit effizienter. Im Austausch wird in der Regen mehr Speicherplatz benötigt, da die Suche beschleunigt wird, indem die Punkte in einer effizienteren Datenstruktur abgelegt werden.
+
+### dreidimensionaler Raum
+
+Für einen dreidimensionalen Raum wird häufig die Höhe vernachlässigt und stattdessen mit den x,y Koordinaten im zweidimensionalem Raum gerechnet. Erst anschließend werden die Höhen wieder berücksichtigt.
 
 ## Fußnoten
 [^stackexchange]: https://gis.stackexchange.com/questions/180729/can-qgis-plot-coordinates-in-degrees-minutes-format
@@ -239,4 +271,7 @@ Abgabe zum 14. Dezember 2021
 [^marble]: https://marble.kde.org
 [^worldwind]: https://worldwind.arc.nasa.gov
 [^git_submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[^delauney_wiki_en]: https://en.wikipedia.org/wiki/Delaunay_triangulation
+[^delauney_wiki_de]: https://de.wikipedia.org/wiki/Delaunay_triangulation
+[^delauney_mit]: https://web.mit.edu/alexmv/Public/6.850-lectures/lecture09.pdf
 
