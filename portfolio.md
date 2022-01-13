@@ -144,7 +144,6 @@ Im Vergleich der alten Koordinaten (grün) und der neuen Koordinaten (rot) ist d
 ![Alte Koordinaten im Vergleich zu neuen Koordinaten](./3-bomber/old_vs_new.png)
 
 
-
 ### Vergleich der Lage mit OpenStreetMap
 
 Um die Korrektheit der Lage zu prüfen wurde im letzten Schritt die XYZ Tiles der OpenStreetMap [^osm_tiles]verwendet. 
@@ -152,13 +151,6 @@ Um die Korrektheit der Lage zu prüfen wurde im letzten Schritt die XYZ Tiles de
 ![FFM1](./3-bomber/FFM1.png)
 
 Auch wenn die Daten zu einem anderen historisch Zeitpunkt erhoben wurden, sieht man eine Abweichung der Lage im Vergleich zur OpenStreetMap. Ein Muster wurde auf den ersten Blick nicht erkennbar. Eine Verschiebung des "Ursprungs" ist ausgeschlossen. Sieht man von einer möglichen Ungenauigkeit der Daten ab (Wahl des Punktes einer Stadt, ...), stellt sich die Frage, ob die korrekte Projektion angewendet wurde.
-
-## Fußnoten
-
-[^stackexchange]: https://gis.stackexchange.com/questions/180729/can-qgis-plot-coordinates-in-degrees-minutes-format
-[^dhl_bombers]:https://dhlab.hypotheses.org/1820
-[^git_data]: https://github.com/ieg-dhr/bombers_baedeker/blob/main/visualisation/coords_dariah_format.csv
-[^osm_tiles]:  https://tile.openstreetmap.org/${z}/${x}/${y}.png
 
 #  4 - Google Earth Pro Alternativen
 
@@ -175,7 +167,7 @@ Ideen:
 
 ### Marble
 
-https://marble.kde.org
+Die Website der Software [^marble]
 
 - open-source
 - Desktop Applikation und Mobile Version (Marble Maps) verfügbar
@@ -186,6 +178,8 @@ https://marble.kde.org
 - deutlich kleinerer Datensatz
 
 ### WorldWind
+
+Die Website der Software [^worldwind]
 
 - open-source
 - Projekt der NASA Learning Technology
@@ -205,9 +199,15 @@ Abgabe zum 30. November 2021
 
 ## Vorgehensweise
 
-Der Datensatz wurde als GithubRepo geforked und ist unter https://github.com/janejulie/AtlantGIS hochgeladen. Die Shape-Files sind als Layer in QGIS hochgeladen worden.
+Der Datensatz wurde als GitHub-Repository geforked und ist unter https://github.com/janejulie/AtlantGIS hochgeladen. 
+Um in ein bestehendes Git-Repository in ein weiteres Repository einzubinden wird "git submodules" ausprobiert.
+Die Shape-Files sind als Layer in QGIS hochgeladen worden und die Visualisierung des Datensatzes nachgestellt. 
 
 ## Ergebnis
+Mit GitHub Submodules wurde gearbeitet, um die Vorteile eines Git-Repositorys zu verwenden [^git_submodules].
+Ohne das Projekt als Submodule einzubinden, kann das geforkede AtlantGIS nicht aktualisiert werden. Operationen wie git pull/commit/push können bei einer Kopie nicht durchgeführt werden. Innerhalb des Projektes wäre dann eine Kopie von AtlantGIS hinterlegt, die Änderungen und insbersondere Verbesserungen nicht einfach aktualisieren kann. Dafür müsste dann eine erneute Kopie des Projektes heruntergeladen werden. Die Versionierung des Projekts geht dabei verloren.
+
+Das Ergebnis der Visualisierung sieht folgendermaßen aus.
 
 ![visualization_atlantgis](./5-atlantGIS/visualization.png)
 
@@ -216,8 +216,6 @@ Der Datensatz wurde als GithubRepo geforked und ist unter https://github.com/jan
 Abgabe zum 7. Dezember 2021
 
 ## Aufgabe
-
-
 
 ## Vorgehensweise
 
@@ -233,11 +231,12 @@ Abgabe zum 14. Dezember 2021
 
 ## Ergebnis
 
-# 8 - 
-
-Abgabe zum 4. Januar 2022
-
-# 9 - Abgabe zum 
-
-
+## Fußnoten
+[^stackexchange]: https://gis.stackexchange.com/questions/180729/can-qgis-plot-coordinates-in-degrees-minutes-format
+[^dhl_bombers]:https://dhlab.hypotheses.org/1820
+[^git_data]: https://github.com/ieg-dhr/bombers_baedeker/blob/main/visualisation/coords_dariah_format.csv
+[^osm_tiles]:  https://tile.openstreetmap.org/${z}/${x}/${y}.png
+[^marble]: https://marble.kde.org
+[^worldwind]: https://worldwind.arc.nasa.gov
+[^git_submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
