@@ -1,0 +1,3 @@
+[submodule "AtlantGIS"]
+	path = AtlantGIS
+	url = git@github.com:janejulie/AtlantGIS.git
