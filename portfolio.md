@@ -208,7 +208,9 @@ Der Datensatz wurde als GithubRepo geforked und ist unter https://github.com/jan
 
 ## Ergebnis
 
+
 ![Screenshot 2021-11-22 at 20.33.49](/Users/jenekabro/Library/Application Support/typora-user-images/Screenshot 2021-11-22 at 20.33.49.png)
+![Screenshot 2021-11-22 at 20.33.49](./ergebnis.png)
 
 # 6 - Raum und Zeit
 
