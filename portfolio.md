@@ -64,7 +64,7 @@ Rekonstruktion der fiktiven Insel Atlantis nach Platons-Dialog "Kritias"
 
 ### Visualisierung als Vektorzeichnung
 
-![visualisierung](/Users/jenekabro/Library/Mobile Documents/com~apple~CloudDocs/Campus/RaDiK/1-atlantis/visualisierung.png)
+![visualisierung](./1-atlantis/visualisierung.png)
 
 # 2 - Erstellung eines eigenen Geopackages
 
@@ -74,7 +74,8 @@ Abgabe zum 9. November 2021
 
 Die folgende Abbildung soll mithilfe von QGIS als Geopackage erstellt werden.
 
-![image-20211122193254532](/Users/jenekabro/Library/Application Support/typora-user-images/image-20211122193254532.png)
+#TODO
+![original](./2-owngeopackage/original.png)
 
 ## Vorgehensweise
 
@@ -82,7 +83,7 @@ Nach dem Erstellen von Layern kann die "Toggle Editing" Funktion angestellt werd
 
 Es wurde ein Mercator Projektion verwendet, die jedoch auch verändert werden kann.
 
-![geopackage_comparison](/Users/jenekabro/Library/Mobile Documents/com~apple~CloudDocs/Campus/RaDiK/2-owngeopackage/geopackage_comparison.png)
+![geopackage_comparison](./2-owngeopackage/geopackage_comparison.png)
 
 ## Ergebnis
 
@@ -96,7 +97,7 @@ Das Geopackage besteht aus 3 Layern.
 
 Die Visualisierung ohne der Bildvorlage resultiert in folgender Layer. Dabei haben die Bäume auch die Radien der Baumkronen abgespeichert. Für eine genauer Visualisierung kann man die Punktgröße in Relation dazu setzen.
 
-![geopackage_final](/Users/jenekabro/Library/Mobile Documents/com~apple~CloudDocs/Campus/RaDiK/2-owngeopackage/geopackage_final.png)
+![geopackage_final](./2-owngeopackage/geopackage_final.png)
 
 # 3 - Bomber's Baedeker
 
@@ -134,13 +135,13 @@ with open('../data.csv') as csvDataFile:
 
 Wie üblich kann der Data Source Manager verwendet werden um ein Geopackage Layer aus csv-Daten zu erstellen. Bisher wurde keine Umrechnung der Daten durchgeführt. Die QGIS-interne Umrechnung wählt man mit der Funktion `DMS-coordinates` aus.
 
-![Einstellungen im Data Source Manager](/Users/jenekabro/Library/Mobile Documents/com~apple~CloudDocs/Campus/RaDiK/3-bomber/DMS.png)
+![Einstellungen im Data Source Manager](./3-bomber/DMS.png)
 
 ### Ergebnis der Visualisierung
 
 Im Vergleich der alten Koordinaten (grün) und der neuen Koordinaten (rot) ist die Rasterbildung nicht mehr deutlich.
 
-![Alte Koordinaten im Vergleich zu neuen Koordinaten](/Users/jenekabro/Library/Mobile Documents/com~apple~CloudDocs/Campus/RaDiK/3-bomber/old_vs_new.png)
+![Alte Koordinaten im Vergleich zu neuen Koordinaten](./3-bomber/old_vs_new.png)
 
 
 
@@ -148,7 +149,7 @@ Im Vergleich der alten Koordinaten (grün) und der neuen Koordinaten (rot) ist d
 
 Um die Korrektheit der Lage zu prüfen wurde im letzten Schritt die XYZ Tiles der OpenStreetMap [^osm_tiles]verwendet. 
 
-![FFM1](/Users/jenekabro/Library/Mobile Documents/com~apple~CloudDocs/Campus/RaDiK/3-bomber/FFM1.png)
+![FFM1](./3-bomber/FFM1.png)
 
 Auch wenn die Daten zu einem anderen historisch Zeitpunkt erhoben wurden, sieht man eine Abweichung der Lage im Vergleich zur OpenStreetMap. Ein Muster wurde auf den ersten Blick nicht erkennbar. Eine Verschiebung des "Ursprungs" ist ausgeschlossen. Sieht man von einer möglichen Ungenauigkeit der Daten ab (Wahl des Punktes einer Stadt, ...), stellt sich die Frage, ob die korrekte Projektion angewendet wurde.
 
@@ -208,9 +209,7 @@ Der Datensatz wurde als GithubRepo geforked und ist unter https://github.com/jan
 
 ## Ergebnis
 
-
-![Screenshot 2021-11-22 at 20.33.49](/Users/jenekabro/Library/Application Support/typora-user-images/Screenshot 2021-11-22 at 20.33.49.png)
-![Screenshot 2021-11-22 at 20.33.49](./ergebnis.png)
+![visualization_atlantgis](./5-atlantGIS/visualization.png)
 
 # 6 - Raum und Zeit
 
