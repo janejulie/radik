@@ -218,10 +218,19 @@ Das Ergebnis der Visualisierung sieht folgendermaßen aus.
 
 Abgabe zum 7. Dezember 2021
 
-## Vorgehensweise
+## Fragestellung
 
+Wie berechnet ORBIS [^orbis] die kürzeste Distanz zwischen zwei Städten?
 
 ## Ergebnis
+
+Für die Ermittlung des kürzesten Weges wird der Dijkstra Algorithmus verwendet. Dieser Algorithmus berechnet bei einem gegebenen Startpunkt die kürzeste Distanz zu den anden Knoten. Da die verschiedenen Wege mit unterschiedlichen Transportmitteln überquert werden, muss hier die gewichtete und gerichtete Variante des Algorithmus benutzt werden. Durch die Gewichtung der Pfade steuert ORBIS die verschiedenen Suchprofile (kürzester, billigster, schnellster Pfad).
+
+Der Dijkstra-Algorithmus [^dijk_wiki] markiert zunächst alle Knoten außer dem Startknoten als 'besucht' und weist ihnen den Wert unendlich zu. Dem Startknoten wird der Wert Null zugewiesen. Vom Startknoten aus werden jetzt alle Nachbarn (Knoten, die eine Kante zum Startknoten haben) besucht und der Wert dann überschieben, wenn der Weg nun kürzer ist. Zyklisch wird dieses Prinzip jetzt für alle Nachbarn dieser Knoten angewandt. Sind alle Knoten besucht und die Nachbarn überprüft sind die Werte, die am Ende im Knoten stehen die, die den günstigsten Wert beschreiben. Um zusätzlich zum kleinsten Wert auch den idealen Pfad zu erhalten, wird in den Knoten nicht nur der Wert, sondern auch der Knoten abgespeichert, der zu diesem führt. Dann kann ausgehend vom Zielknoten der Pfad rekonstruiert werden. 
+
+Im Beispiel wird die Route von London nach Rom gesucht. 
+
+![orbis](./6-topologie/orbis.png)
 
 
 # 7 - Geodatenmodelle
@@ -271,6 +280,8 @@ Für einen dreidimensionalen Raum wird häufig die Höhe vernachlässigt und sta
 [^marble]: https://marble.kde.org
 [^worldwind]: https://worldwind.arc.nasa.gov
 [^git_submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[^orbis]: https://orbis.stanford.edu/#
+[^dijk_wiki]: https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 [^delauney_wiki_en]: https://en.wikipedia.org/wiki/Delaunay_triangulation
 [^delauney_wiki_de]: https://de.wikipedia.org/wiki/Delaunay_triangulation
 [^delauney_mit]: https://web.mit.edu/alexmv/Public/6.850-lectures/lecture09.pdf
