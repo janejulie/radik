@@ -272,6 +272,10 @@ Um Laufzeit zu sparen kann die inkrementelle Konstruktion, der Divide-and-Conque
 
 Für einen dreidimensionalen Raum wird häufig die Höhe vernachlässigt und stattdessen mit den x,y Koordinaten im zweidimensionalem Raum gerechnet. Erst anschließend werden die Höhen wieder berücksichtigt.
 
+--- 
+
+Ab hier wurde das Gis-Projekt zu Karabalgasun begonnen.
+
 ## Fußnoten
 [^stackexchange]: https://gis.stackexchange.com/questions/180729/can-qgis-plot-coordinates-in-degrees-minutes-format
 [^dhl_bombers]:https://dhlab.hypotheses.org/1820
